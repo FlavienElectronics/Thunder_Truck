@@ -19,6 +19,80 @@ void delay(uint32_t cycle){
     }
 }
 
+#define Mot1_mask 0x03
+#define Mot2_mask 0x0C
+#define Mot3_mask 0x30
+#define Mot4_mask 0xC0
+
+void StopWheels(){
+    Wheel_Modes_Write(0);
+}
+
+void Spin_Right(int Vitesse){
+    Wheel_Modes_Write(0xAA);
+    PWM_all_WriteCompare1(Vitesse);
+    PWM_all_WriteCompare2(Vitesse);
+}
+void Spin_Left(int Vitesse){
+    Wheel_Modes_Write(0x55);
+    PWM_all_WriteCompare1(Vitesse);
+    PWM_all_WriteCompare2(Vitesse);
+}
+void Forward(int Vitesse){
+    Wheel_Modes_Write(0x96);
+    PWM_all_WriteCompare1(Vitesse);
+    PWM_all_WriteCompare2(Vitesse);
+}
+void Backward(int Vitesse){
+    Wheel_Modes_Write(0x69);
+    PWM_all_WriteCompare1(Vitesse);
+    PWM_all_WriteCompare2(Vitesse);
+}
+void ForwardRight(int Vitesse){
+    Wheel_Modes_Write(0x96);
+    int tempVitD = Vitesse-30;
+    int tempVitG = Vitesse;
+    if (tempVitD<0){
+        tempVitD = 0;
+        tempVitG = 30;
+    }
+    PWM_all_WriteCompare1(tempVitD);
+    PWM_all_WriteCompare2(tempVitG);
+}
+void ForwardLeft(int Vitesse){
+    Wheel_Modes_Write(0x96);
+    int tempVitD = Vitesse;
+    int tempVitG = Vitesse-30;
+    if (tempVitG<0){
+        tempVitG = 0;
+        tempVitD = 30;
+    }
+    PWM_all_WriteCompare1(tempVitD);
+    PWM_all_WriteCompare2(tempVitG);
+}
+void BackwardRight(int Vitesse){
+    Wheel_Modes_Write(0x69);
+    int tempVitD = Vitesse-30;
+    int tempVitG = Vitesse;
+    if (tempVitD<0){
+        tempVitD = 0;
+        tempVitG = 30;
+    }
+    PWM_all_WriteCompare1(tempVitD);
+    PWM_all_WriteCompare2(tempVitG);
+}
+void BackwardLeft(int Vitesse){
+    Wheel_Modes_Write(0x69);
+    int tempVitD = Vitesse;
+    int tempVitG = Vitesse-30;
+    if (tempVitG<0){
+        tempVitG = 0;
+        tempVitD = 30;
+    }
+    PWM_all_WriteCompare1(tempVitD);
+    PWM_all_WriteCompare2(tempVitG);
+}
+
 char Char_main;
 enum Direction
 {
@@ -46,8 +120,12 @@ int main(void)
     UART_test_Enable();
     UART_test_Start();
     
+    /*Place the init code */
+    PWM_all_Start();
+    
     Interruption_CMD_Enable();
     Interruption_CMD_Start();
+    int vitesse = 100;
     char mes[1] ={0}; 
     
     while(1)
@@ -55,6 +133,7 @@ int main(void)
         /* Place your application code here. */
         //delay(10000000);
         //UART_send("Denis", 5);
+        Forward(vitesse);
         
         if(Char_main == DROITE)
         {

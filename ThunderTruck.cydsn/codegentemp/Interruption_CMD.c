@@ -29,6 +29,7 @@
 /* `#START Interruption_CMD_intc` */
     
 #include "utilities.h"
+    extern char Char_main;
 
 /* `#END` */
 
@@ -168,8 +169,12 @@ CY_ISR(Interruption_CMD_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START Interruption_CMD_Interrupt` */
 
-    UART_send("Test1", 5);
     
+    //char8 buffer[255];
+    //UART_read(buffer, 255);
+    //UART_send(buffer, 32);
+    Char_main = UART_test_GetChar();
+    int useless = 0;
     /* `#END` */
 }
 
