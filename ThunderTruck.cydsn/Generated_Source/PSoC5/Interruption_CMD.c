@@ -29,7 +29,6 @@
 /* `#START Interruption_CMD_intc` */
     
 #include "utilities.h"
-    extern char Char_main;
 
 /* `#END` */
 
@@ -169,12 +168,44 @@ CY_ISR(Interruption_CMD_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START Interruption_CMD_Interrupt` */
 
+    const int vitesse = 75;
+    char ch;
     
-    //char8 buffer[255];
-    //UART_read(buffer, 255);
-    //UART_send(buffer, 32);
-    Char_main = UART_test_GetChar();
-    int useless = 0;
+    ch = UART_test_GetChar();
+            
+        if(ch == DROITE)
+        {
+            Spin_Right(vitesse);
+            UART_test_WriteTxData(1);
+            ch = 0;
+        }
+        else if(ch == GAUCHE)
+        {
+            Spin_Left(vitesse);
+            UART_test_WriteTxData(2);
+            ch = 0;
+        }
+        else if(ch == HAUT)
+        {
+            Forward(vitesse);
+            UART_test_WriteTxData(3);
+            ch = 0;
+        }
+        else if(ch == BAS)
+        {
+            Backward(vitesse);
+            UART_test_WriteTxData(4);
+            ch = 0;
+        }
+        else if(ch == ACCELERATION_EXPLOSIVE)
+        {
+            UART_test_WriteTxData(5);
+            ch = 0;
+        }
+        else if (ch == '0')
+        {
+           StopWheels(); 
+        }
     /* `#END` */
 }
 

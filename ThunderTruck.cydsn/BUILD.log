@@ -1,10 +1,7 @@
---------------- Build Started: 11/27/2025 11:31:43 Project: ThunderTruck, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 11/27/2025 11:48:35 Project: ThunderTruck, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
-main.c: In function 'main':
-main.c:129:10: warning: unused variable 'mes' [-Wunused-variable]
-     char mes[1] ={0}; 
-          ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/utilities.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c utilities.c -o .\CortexM3\ARM_GCC_541\Debug\utilities.o
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\ThunderTruck.a .\CortexM3\ARM_GCC_541\Debug\PWM_test.o .\CortexM3\ARM_GCC_541\Debug\PWM_test_PM.o .\CortexM3\ARM_GCC_541\Debug\PWM_out.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\UART_test.o .\CortexM3\ARM_GCC_541\Debug\UART_test_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_test_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_test_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_test_IntClock.o .\CortexM3\ARM_GCC_541\Debug\Interruption_CMD.o .\CortexM3\ARM_GCC_541\Debug\PWM_all.o .\CortexM3\ARM_GCC_541\Debug\PWM_all_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_2.o .\CortexM3\ARM_GCC_541\Debug\Pin_PWM2_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_INa2_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_INb2_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_INa1_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_INb1_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_INa3_arr.o .\CortexM3\ARM_GCC_541\Debug\Pin_INb3_arr.o .\CortexM3\ARM_GCC_541\Debug\Pin_INa4_arr.o .\CortexM3\ARM_GCC_541\Debug\Pin_INb4_arr.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot_INT.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot_PM.o .\CortexM3\ARM_GCC_541\Debug\Pot_analog.o .\CortexM3\ARM_GCC_541\Debug\Pin_PWM3_arr.o .\CortexM3\ARM_GCC_541\Debug\Pin_PWM1_ava.o .\CortexM3\ARM_GCC_541\Debug\Pin_PWM4_arr.o .\CortexM3\ARM_GCC_541\Debug\Wheel_Modes.o .\CortexM3\ARM_GCC_541\Debug\Wheel_Modes_PM.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot_theACLK.o .\CortexM3\ARM_GCC_541\Debug\ADC_Pot_Bypass.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\ThunderTruck.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o U:\5SEE\Thunder_Truck\ThunderTruck.cydsn\CortexM3\ARM_GCC_541\Debug\ThunderTruck.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\utilities.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\ThunderTruck.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/ThunderTruck.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
@@ -13,6 +10,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S U:\5SEE\Thunder_Truck\ThunderTruck.cydsn\CortexM3\ARM_GCC_541\Debug\ThunderTruck.elf
-Flash used: 2454 of 262144 bytes (0,9 %).
-SRAM used: 2529 of 65536 bytes (3,9 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/27/2025 11:31:47 ---------------
+Flash used: 2510 of 262144 bytes (1,0 %).
+SRAM used: 2521 of 65536 bytes (3,8 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 11/27/2025 11:48:40 ---------------
