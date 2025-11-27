@@ -1,0 +1,8 @@
+U:\PSoC Creator\ThunderTruck\ThunderTruck.cydsn\ThunderTruck.cyprj|f65d852a-c0e7-413c-a012-b3c562ec21c9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|458c1ad8-5f09-49b1-b169-9ccbe3008ea8
+U:\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|295e8dd7-cd16-4e2e-9642-857787447a83
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c4765245-c209-4925-ae2f-e08ce11af601
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a946b9fc-9f3b-4dd5-813c-bc118a9b2f6a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1aa3a393-bfba-42a6-bf8a-ac5d918e2efb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|0e41c4e8-a29d-4425-a801-9f96bc8f1495
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|a183c30a-4bc9-4224-8585-96603fead874
