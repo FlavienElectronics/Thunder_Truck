@@ -125,7 +125,7 @@ int main(void)
     
     Interruption_CMD_Enable();
     Interruption_CMD_Start();
-    int vitesse = 100;
+    int vitesse = 75;
     char mes[1] ={0}; 
     
     while(1)
@@ -133,33 +133,39 @@ int main(void)
         /* Place your application code here. */
         //delay(10000000);
         //UART_send("Denis", 5);
-        Forward(vitesse);
+        
         
         if(Char_main == DROITE)
         {
             UART_test_WriteTxData(1);
             Char_main = 0;
         }
-        if(Char_main == GAUCHE)
+        else if(Char_main == GAUCHE)
         {
             UART_test_WriteTxData(2);
             Char_main = 0;
         }
-        if(Char_main == HAUT)
+        else if(Char_main == HAUT)
         {
+            Forward(vitesse);
             UART_test_WriteTxData(3);
             Char_main = 0;
         }
-        if(Char_main == BAS)
+        else if(Char_main == BAS)
         {
             UART_test_WriteTxData(4);
             Char_main = 0;
         }
-        if(Char_main == ACCELERATION_EXPLOSIVE)
+        else if(Char_main == ACCELERATION_EXPLOSIVE)
         {
             UART_test_WriteTxData(5);
             Char_main = 0;
         }
+        else if (Char_main == '0')
+        {
+           StopWheels(); 
+        }
+        
     }
 }
 

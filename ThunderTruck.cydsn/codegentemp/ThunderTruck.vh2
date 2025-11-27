@@ -2,7 +2,7 @@
 --	Conversion of ThunderTruck.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Nov 27 11:11:30 2025
+--	Thu Nov 27 11:22:53 2025
 --
 
 USE cypress.cypress.all;
