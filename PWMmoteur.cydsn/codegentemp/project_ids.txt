@@ -1,0 +1,6 @@
+U:\5SEE\PSOC\WorkspacePSOC\PWMmoteur.cydsn\PWMmoteur.cyprj|2bb83f27-331a-4972-a336-be7efb77f0e5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|45577677-93b2-4b6d-b0d4-82049c510bbe
+U:\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|3ed4a0d9-ad42-44d0-8c87-901f3007ac4f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3ab72983-3d96-41ec-a64f-8355003478fd
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0da53b66-7900-444f-b6ce-02e600d69177
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e14116ff-b7cd-4647-9a05-aea611ae7474
