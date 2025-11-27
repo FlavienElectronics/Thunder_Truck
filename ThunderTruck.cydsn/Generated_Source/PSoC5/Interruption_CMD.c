@@ -168,7 +168,8 @@ CY_ISR(Interruption_CMD_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START Interruption_CMD_Interrupt` */
 
-    const int vitesse = 75;
+    static uint8_t vitesse = 75; // valeur initiale de la vitesse
+    // max vitesse 255
     char ch;
     
     ch = UART_test_GetChar();
@@ -202,10 +203,19 @@ CY_ISR(Interruption_CMD_Interrupt)
             UART_test_WriteTxData(5);
             ch = 0;
         }
+        else if(ch == '%') // en attente de la vitesse
+        {
+            uint8_t temp_vitesse = UART_test_GetChar(); // après un %, la valeur qui suit est la vitesse désirée
+            if (temp_vitesse != 0)
+            {
+                vitesse = temp_vitesse;
+            }
+        }
         else if (ch == '0')
         {
-           StopWheels(); 
+            StopWheels();
         }
+        
     /* `#END` */
 }
 
